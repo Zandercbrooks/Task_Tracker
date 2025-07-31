@@ -29,7 +29,8 @@ while True:
         tasks[int(input("Which task would you like to mark as in-progress 1-" + str(len(tasks)) + ": ")) - 1].markInProgress()
 
         
-    #elif user_input == "mark-done":
+    elif user_input == "mark-done":
+        tasks[int(input("Which task would you like to mark as done 1-" + str(len(tasks)) + ": ")) - 1].markDone()
         
     #elif user_input == "list":
         
