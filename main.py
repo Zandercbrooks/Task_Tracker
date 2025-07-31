@@ -21,7 +21,7 @@ while True:
         
     #elif user_input == "update":
         
-    elif user_input == "delete":
+    elif user_input == "delete": # these three functions do - 1 to offset for starting at 1 instead of 0 making it easier for user
         tasks.remove(int(input("Which task would you like to remove 1-" + str(len(tasks)) + ": ")) - 1)
 
         
@@ -32,14 +32,25 @@ while True:
     elif user_input == "mark-done":
         tasks[int(input("Which task would you like to mark as done 1-" + str(len(tasks)) + ": ")) - 1].markDone()
         
-    #elif user_input == "list":
+    elif user_input == "list":
+        for task in tasks:
+            print(str(task + 1) + tasks[task].getDescription())
+    # list functions    
+    elif user_input == "list done":
+        for task in tasks:
+            if(task.getDescription() == "done"):
+                print(str(task + 1) + tasks[task].getDescription())
         
-    #elif user_input == "list done":
-        
-    #elif user_input == "list todo":
-        
-    #elif user_input == "list in-progress":
-        
+    elif user_input == "list todo":
+        for task in tasks:
+            if task.getDescription == "todo":
+                print(str(task + 1) + tasks[task].getDescription())
+
+    elif user_input == "list in-progress":
+        for task in tasks:
+                if task.getDescription == "in-progress":
+                    print(str(task + 1) + tasks[task].getDescription())
+
     else:
         print("Error Unknown Command")
         
