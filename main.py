@@ -22,10 +22,11 @@ while True:
     #elif user_input == "update":
         
     elif user_input == "delete":
-        tasks.remove(int(input("Which task would you like to remove 1-" + str(len(tasks) + ": "))) - 1)
+        tasks.remove(int(input("Which task would you like to remove 1-" + str(len(tasks)) + ": ")) - 1)
 
         
-    #elif user_input == "mark-in-progress":
+    elif user_input == "mark-in-progress":
+        tasks[int(input("Which task would you like to mark as in-progress 1-" + str(len(tasks)) + ": ")) - 1].markInProgress()
 
         
     #elif user_input == "mark-done":
