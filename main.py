@@ -19,9 +19,11 @@ while True:
     elif user_input == "add":
         tasks.append(Task(input("Enter task description: ")))
         
-    #elif user_input == "update":
+    elif user_input == "update":
+        taskNumber = int(input("select task to update 1-" + str(len(tasks)) + ": ")) -1
+        tasks[taskNumber].update(input("Enter new description to update task"))
         
-    elif user_input == "delete": # these three functions do - 1 to offset for starting at 1 instead of 0 making it easier for user
+    elif user_input == "delete": # these functions do - 1 to offset for starting at 1 instead of 0 making it easier for user
         tasks.remove(int(input("Which task would you like to remove 1-" + str(len(tasks)) + ": ")) - 1)
 
         
