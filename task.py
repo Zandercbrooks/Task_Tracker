@@ -5,3 +5,8 @@ class Task:
 
     def markInProgress(self):
         self.progress = "in-progress"
+
+    def getDescription(self):
+        return self.description
+    def getProgress(self):
+        return self.progress
